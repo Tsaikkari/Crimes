@@ -7,10 +7,16 @@ import Drugs from '../components/Drugs'
 import Gun from '../components/Gun'
 import Burglary from '../components/Burglary'
 import Between from '../components/Between'
-import { getManchesterCrimesRequest, getMacclesfieldCrimesRequest } from '../redux/actions/crimes'
+import Loader from '../components/Loader'
+import {
+  getManchesterCrimesRequest,
+  getMacclesfieldCrimesRequest,
+} from '../redux/actions/crimes'
 
 const MapPage = () => {
   const crimes = useSelector((state) => state.crimes)
+  const { manchesterCrimes, macclesfieldCrimes, loading } = crimes
+
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -23,15 +29,20 @@ const MapPage = () => {
 
   return (
     <>
+      {loading && <Loader />}
       <Map center={[53.48, -2.21]} zoom={13}>
         <TileLayer
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Burglary crimes={crimes.manchesterCrimes} />
-        <Gun crimes={crimes.manchesterCrimes} />
-        <ViolentCrime crimes={crimes.manchesterCrimes} />
-        <Drugs crimes={crimes.manchesterCrimes} />
+        {manchesterCrimes && (
+          <>
+            <Burglary crimes={manchesterCrimes} />
+            <Gun crimes={manchesterCrimes} />
+            <ViolentCrime crimes={manchesterCrimes} />
+            <Drugs crimes={manchesterCrimes} />
+          </>
+        )}
       </Map>
       <Between />
       <Map center={[53.253, -2.14]} zoom={13}>
@@ -39,10 +50,14 @@ const MapPage = () => {
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Burglary crimes={crimes.macclesfieldCrimes} />
-        <Gun crimes={crimes.macclesfieldCrimes} />
-        <Drugs crimes={crimes.macclesfieldCrimes} />
-        <ViolentCrime crimes={crimes.macclesfieldCrimes} />
+        {macclesfieldCrimes && (
+          <>
+            <Burglary crimes={macclesfieldCrimes} />
+            <Gun crimes={macclesfieldCrimes} />
+            <Drugs crimes={macclesfieldCrimes} />
+            <ViolentCrime crimes={macclesfieldCrimes} />
+          </>
+        )}
       </Map>
       <a href='https://icons8.com/icon/t_8ZaOFbra3N/crime'>
         Crime icon by Icons8

@@ -10,7 +10,7 @@ export const gun = new Icon({
 const Gun = ({ crimes }) => {
   return (
     <>
-      {crimes.map(
+      {crimes && crimes.map(
         (crime) =>
           crime.category === 'possession-of-weapons' && (
             <Marker

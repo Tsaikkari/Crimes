@@ -23,3 +23,5 @@ npm install
 ## Running the app
 
 npm start
+
+In case of an error: reload the page.

@@ -11,9 +11,10 @@ export const getManchesterCrimesSuccess = (manchesterCrimes) => {
   }
 }
 
-export const getManchesterCrimesFail = () => {
+export const getManchesterCrimesFail = (error) => {
   return {
     type: 'GET_MANCHESTER_CRIMES_FAIL', 
+    payload: error,
   }
 }
 
@@ -26,13 +27,14 @@ export const getMacclesfieldCrimesRequest = () => {
 export const getMacclesfieldCrimesSuccess = (macclesfieldCrimes) => {
   return {
     type: 'GET_MACCLESFIELD_CRIMES_SUCCESS', 
-    payload: macclesfieldCrimes
+    payload: macclesfieldCrimes,
   }
 }
 
-export const getMacclesfieldCrimesFail = () => {
+export const getMacclesfieldCrimesFail = (error) => {
   return {
     type: 'GET_MACCLESFIELD_CRIMES_FAIL', 
+    payload: error,
   }
 }
 

@@ -11,9 +11,10 @@ export const getManchesterTeamRequest = () => {
     }
   }
   
-  export const getManchesterTeamFail = () => {
+  export const getManchesterTeamFail = (error) => {
     return {
       type: 'GET_MANCHESTER_TEAM_FAIL', 
+      payload: error,
     }
   }
   
@@ -30,9 +31,10 @@ export const getManchesterTeamRequest = () => {
     }
   }
   
-  export const getMacclesfieldTeamFail = () => {
+  export const getMacclesfieldTeamFail = (error) => {
     return {
       type: 'GET_MACCLESFIELD_TEAM_FAIL', 
+      payload: error,
     }
   }
 

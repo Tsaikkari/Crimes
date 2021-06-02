@@ -7,6 +7,8 @@ import rootSaga from './saga'
 export const initState = {
   crimes: [],
   teams: [],
+  loading: false,
+  error: false,
 }
 
 export default function makeStore(initialState = initState) {

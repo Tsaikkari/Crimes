@@ -11,7 +11,7 @@ export const drugs = new Icon({
 const Drugs = ({ crimes }) => {
   return (
     <>
-      {crimes.map(
+      {crimes && crimes.map(
         (crime) =>
           crime.category === 'drugs' && (
             <Marker

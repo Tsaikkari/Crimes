@@ -11,7 +11,7 @@ export const burglary = new Icon({
 const Burglary = ({ crimes }) => {
   return (
     <>
-      {crimes.map(
+      {crimes && crimes.map(
         (crime) =>
           crime.category === 'burglary' && (
             <Marker

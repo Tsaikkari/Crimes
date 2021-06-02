@@ -1,6 +1,6 @@
 # Crime Map of Manchester Centre and Macclesfield
 
-### Crime data from April 2021 regarding to burglary, drugs, violent crimes and possession of weapons are displayed on the map and in a diagram. A diagram about team volumes in those areas is shown on the Crime Charts page.
+### Crime data from April 2021 regarding to burglary, drugs, violent crimes and possession of weapons are displayed on the map and in a diagram. A diagram about police force volumes in those areas is shown on the Crime Charts page.
 
 ### Data source: https://data.police.uk/
 

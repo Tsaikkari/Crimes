@@ -89,7 +89,7 @@ const ChartPage = () => {
         <ChartCrime data={macData} />
         <Between />
       </div>
-      <h2 className='teams-chart-header'>Team size in Manchester and Macclesfield</h2>
+      <h2 className='teams-chart-header'>Police team size in Manchester and Macclesfield</h2>
       {manchesterTeam && macclesfieldTeam && 
       <ChartTeam data={teamData} />}
     </>

@@ -13,8 +13,7 @@
 - Leaflet.js
 - D3.js
 
-To start using, copy the repo:
-cd crimes
+To start using, copy the repo
 
 ## Installation
 
